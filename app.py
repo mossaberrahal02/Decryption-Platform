@@ -1,21 +1,18 @@
 import streamlit as st
 import crypto
 
-# Caesar Cipher Functions
 def caesar_encrypt(message, key):
     return crypto.encrypt(message, key)
 
 def caesar_decrypt(message, key):
     return crypto.decrypt(message, key)
 
-# Vigenère Cipher Functions
 def vigenere_encrypt(message, key):
     return crypto.vigenere_encrypt(message, key)
 
 def vigenere_decrypt(message, key):
     return crypto.vigenere_decrypt(message, key)
 
-# Modular Arithmetic Functions
 def mod_add(a, b, m):
     return crypto.mod_add(a, b, m)
 
@@ -28,14 +25,12 @@ def mod_multiply(a, b, m):
 def mod_divide(a, b, m):
     return crypto.mod_divide(a, b, m)
 
-# Modular Inverse
 def mod_inverse(a, m):
     try:
         return crypto.mod_inverse(a, m)
     except ValueError as e:
         return str(e)
 
-# Streamlit App Interface
 def main():
     st.title("Plateforme de Cryptographie et Arithmétique Modulaire")
 
